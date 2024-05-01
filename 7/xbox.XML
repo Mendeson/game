@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xbox.XSL"?>
+<gamelist>
+<game>
+	<name>Mortal Combat X</name>
+    <img>https://rukminim1.flixcart.com/image/612/612/jtx9evk0/physical-game/j/k/e/standard-edition-mortal-kombat-11-full-game-xbox-one-original-imaff5x5eyz5d9cb.jpeg?q=70</img>
+	<price>Rs 2999</price>
+	<rating>4</rating>
+</game>
+<game>
+	<name>Resident Evil 7</name>
+    <img>https://images-na.ssl-images-amazon.com/images/I/91ax40t%2B4DL._SL1500_.jpg</img>
+	<price>Rs 1499</price>
+	<rating>4</rating>
+</game>
+<game>
+	<name>Devil May Cry 5</name>
+    <img>https://images-na.ssl-images-amazon.com/images/I/81WV0wiR2gL._AC_SL1500_.jpg</img>
+	<price>Rs 2599</price>
+	<rating>4</rating>
+</game>
+<game>
+	<name>Doom:Eternal</name>
+    <img>https://i.pinimg.com/474x/40/2a/50/402a507aaffa6bc8b0031a2d8d7ec3d9.jpg</img>
+	<price>Rs 1599</price>
+	<rating>4</rating>
+</game>
+
+</gamelist>

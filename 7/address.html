@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="address.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Address Page</title>
+  <script type="text/javascript"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="icon.png">
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a> </li>
+                <li><a href="ps4games.html">Playstation</a> </li>
+                <li><a href="xbox.html">Xbox</a></li>
+                <li><a href="">Nintendo</a></li>
+                <li><a href="">PC</a></li>
+                <li><a href="login.html">Sign Up/In</a></li>
+
+            </ul>
+        </nav>
+        <img src="https://pngimg.com/uploads/shopping_cart/shopping_cart_PNG38.png" width="30px" height="30px">
+        <img src="menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+</div>
+
+<!-- acc page-->
+<div class="acc-pg" ng-app="Address" ng-controller="myCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="https://pyxis.nymag.com/v1/imgs/cbf/4a2/ec7456fedf57d61fc8e52cb51c3acb47dd-video-game-consoles-for-you-lede.2x.rsocial.w600.jpg" width="100%">
+            </div>
+            <div class="col-2">
+               <div class="form-container">
+                    <div class="form--btn">
+                        <span onclick="">Enter Your Address</span>
+                        <hr id="Indicator">
+                    </div>
+                    <div class="container3">
+                        <div class="con4">
+                                <input type="text" placeholder="Name of Addressee" ng-model="line_1" value="Sam">
+                                <input type="text" placeholder="Room No.,Building No." ng-model="line_2" value="12,A Building">
+                                <input type="text" placeholder="Name of Locality" ng-model="line_3" value="Star Society,Byculla">
+                                <input type="text" placeholder="City,State" ng-model="line_4" value="Mumbai,Maharashtra">
+                                <input type="text" placeholder="Pincode" ng-model="line_5" value="400008">
+                                <button type="submit" class="btn" onclick="show()">Check Address</button>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-2">
+                <div class="container5 hidden" id="con">
+                    <span> Your Products will be delivered to</span>
+                    <hr id="Indicator2">
+                        <br/> {{line_1}}<br/>{{line_2}}<br/>{{line_3}}<br/>{{line_4}}<br/>{{line_5}}<br/>{{line_6}}
+                    <hr id="Indicator2">
+                    <span> Thank You For Shopping</span>
+                </div>
+            </div>
+            <!-- <div class="col-2">
+                <div class="forimage">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-0nxb_xfg4mT9--Tbd1KRerjUF6UTbdu4aA&usqp=CAU"> 
+                </div>
+            </div> -->
+        </div>
+    </div>
+    
+</div>
+    
+<!----footer------>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Available on Apple App Store and Google Play</p>
+                    <div class="app-logo">
+                        <img src="http://assets.stickpng.com/images/5a902db97f96951c82922874.png">
+                        <img src="http://assets.stickpng.com/images/5a902dbf7f96951c82922875.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1228570/header.jpg?t=1593725286">
+                    <p>Making Game delivery easy</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Return Policy</li>
+                        <li>Customer Service</li>
+                        <li>Locate store near you</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>By</h3>
+                    <ul>
+                        <li>Shreyans Mulkutkar</li>
+                        <li>9819693167</li>
+                        <li>1914120</li>
+                        <li>B4 IT</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright</p>
+        </div>
+    </div>
+
+    <!-- script for menu -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+        
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight == "200px";
+            }
+            else{
+                MenuItems.style.maxHeight == "0px";
+            }
+        }
+    </script>
+
+    <!-- controller script -->
+    <script>
+        var app = angular.module('Address', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.line_1= "";
+            $scope.line_2= "";
+            $scope.line_3= "";
+            $scope.line_4= "";
+            $scope.line_5= "";
+            $scope.line_6= "";
+        });
+    </script>
+    <!-- script for menu -->
+    <script language="JavaScript">
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle(){
+            var MenuItems = document.getElementById("MenuItems");
+            if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+
+            }
+            else{
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+    <script>
+        // var ele = document.getElementById("con")
+        // console.log(ele.className)
+        function show(){
+            var ele = document.getElementById("con")
+            console.log(ele.className)
+            if (ele.className =="container5 hidden ng-binding"){
+                ele.className = "container5";
+                console.log(ele.className)
+            }
+
+            else{
+                ele.className = "container5 hidden ng-binding";
+                console.log(ele.className)
+            }
+
+        }
+    </script>
+</body>
+</html>
